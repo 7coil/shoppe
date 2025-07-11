@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-caption {
+    font-size: 16pt;
+    margin-bottom: 30px;
+}
+
+.table-header-cell {
+    width: 50%;
+}
+
+.table-body-cell-product,
+.table-body-cell-pounds,
+.table-body-cell-pence {
+    vertical-align: middle;
+}
+
+.table-body-cell-product {
+    padding: 0px 15px;
+    width: 40%;
+}
+
+.table-body-cell-divider {
+    border-right: solid;
+}
+
+.table-body-cell-pounds {
+    padding-left: 15px;
+    width: 6%;
+    text-align: right;
+}
+
+.table-body-cell-pence {
+    text-align: left;
+    width: 4%;
+    padding-right: 15px;
+    font-size: 8pt;
+}
+
+.table-body-cell-product-subtitle {
+    font-size: 8pt;
+}
+
+
+.payment {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 50%;
+    text-align: center;
+}
