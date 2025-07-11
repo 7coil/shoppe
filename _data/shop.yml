@@ -1,0 +1,59 @@
+title: Fridge prices for June 2025 v4
+products:
+  - category: Food
+    title: SauTao Noodles
+    subtitle: 壽桃牌
+    price: 2
+  - category: Food
+    title: Jerky
+    subtitle: Original & Teriyaki
+    price: 1
+  - category: Food
+    title: Pork Puffs
+    subtitle: null
+    price: 1
+  - category: Food
+    title: Graze
+    subtitle: null
+    price: 1
+  - category: Food
+    title: Prezels
+    subtitle: null
+    price: 1
+  - category: Food
+    title: Eat Natural
+    subtitle: Fruit & Nut
+    price: 1
+  - category: Food
+    title: Monster Munch
+    subtitle: 
+    price: 1
+  - category: Food
+    title: Other snacks
+    subtitle: crisps, chocolate, waffles, etc.
+    price: .70
+
+  - category: Drink
+    title: Club Mate
+    subtitle: null
+    price: 2
+  - category: Drink
+    title: Spezi
+    subtitle: null
+    price: 2
+  - category: Drink
+    title: Square Root
+    subtitle: null
+    price: 1.50
+  - category: Drink
+    title: Bad Cola
+    subtitle: Bottle
+    price: 1.50
+  - category: Drink
+    title: Hip Pop Kombucha
+    subtitle: null
+    price: 1.50
+  - category: Drink
+    title: Other cans
+    subtitle: null
+    price: .50

@@ -1,0 +1,79 @@
+---
+# front matter tells Jekyll to process liquid
+---
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+    {% assign groupedProducts = (site.data.shop.products | group_by: "category") %}
+
+    <table class="parent-table">
+        <caption class="parent-table-caption">
+            {{ site.data.shop.title }}
+        </caption>
+        <thead>
+            <tr>
+                {% for category in groupedProducts %}
+                <th class="parent-table-header-cell">{{ category.name }}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                {% for category in groupedProducts %}
+
+                <td class="parent-table-cell {% if forloop.index0 == 0 %} parent-table-left-cell{% endif %}">
+                    <table class="child-table">
+                        <tbody>
+                            {% for product in category.items %}
+                            {% assign pence_value = product.price | times: 100 | modulo: 100 | round %}
+                            
+                            <tr>
+                                <td class="child-table-body-cell-product">
+                                    {{ product.title }}
+                                    {% if product.subtitle != null %}
+                                        <span class="child-table-body-cell-product-subtitle">({{ product.subtitle }})</span>
+                                    {% endif %}
+                                </td>
+                                <td class="child-table-body-cell-pounds">
+                                    {% if product.price > 0.99 %}
+                                        £{{ product.price | floor }}
+                                    {% endif %}
+                                    {% if product.price < 1 %}
+                                        {{ pence_value }}
+                                    {% endif %}
+                                </td>
+                                <td class="child-table-body-cell-pence">
+                                    {% if product.price > 0.99 and pence_value > 0 %}
+                                        .{{ pence_value }}
+                                    {% endif %}
+                                    {% if product.price < 1 %}
+                                        p
+                                    {% endif %}
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </td>
+                {% endfor %}
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="payment">
+        <p>
+            Please pay by card, cash in the <b>Honesty Box</b>, or by QR code
+        </p>
+        <img class="qr" src="/images/quick-response-payment.png" />
+    </div>
+</body>
+
+</html>
