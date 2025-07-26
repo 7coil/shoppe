@@ -5,8 +5,9 @@ body {
     margin: 0;
     font-family: sans-serif;
 
-    width: 1024px;
-    height: 758px;
+    width: 1366px;
+    height: 720px;
+    overflow: hidden;
 }
 
 .parent-table {
@@ -14,18 +15,17 @@ body {
     border-collapse: collapse;
 
     .parent-table-caption {
-        font-size: 16pt;
-        margin-bottom: 30px;
+        font-size: 40pt;
+        margin-bottom: 20px;
     }
 
-    .parent-table-header-cell,
     .parent-table-header-cell {
         width: 50%;
+        font-size: 40pt;
     }
 
     .parent-table-cell {
         vertical-align: top;
-
     }
 
 
@@ -41,6 +41,13 @@ body {
         .child-table-body-cell-pounds,
         .child-table-body-cell-pence {
             vertical-align: middle;
+            // padding-top: 4px;
+            // padding-bottom: 4px;
+        }
+
+        .child-table-body-cell-product,
+        .child-table-body-cell-pounds {
+            font-size: 36pt;
         }
 
         .child-table-body-cell-product {
@@ -58,23 +65,28 @@ body {
             text-align: left;
             width: 4%;
             padding-right: 15px;
-            font-size: 8pt;
+            font-size: 24pt;
         }
 
         .child-table-body-cell-product-subtitle {
-            font-size: 8pt;
+            font-size: 28pt;
             font-style: italic;
             white-space: nowrap;
         }
     }
 }
 
-
-
 .payment {
+    display: flex;
     position: fixed;
     bottom: 0;
     right: 0;
     left: 50%;
     text-align: center;
+    padding: 20px;
+    
+    .payment-message {
+        font-size: 24pt;
+        flex-grow: 1;
+    }
 }

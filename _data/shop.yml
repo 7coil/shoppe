@@ -1,12 +1,12 @@
 title: Fridge prices for June 2025 v4
 products:
   - category: Food
-    title: SauTao Noodles
-    subtitle: 壽桃牌
+    title: Noodles
+    subtitle: Sautao / Buldak
     price: 2
   - category: Food
     title: Jerky
-    subtitle: Original & Teriyaki
+    subtitle: null
     price: 1
   - category: Food
     title: Pork Puffs
@@ -22,7 +22,7 @@ products:
     price: 1
   - category: Food
     title: Eat Natural
-    subtitle: Fruit & Nut
+    subtitle: null
     price: 1
   - category: Food
     title: Monster Munch
